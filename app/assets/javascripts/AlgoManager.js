@@ -38,10 +38,13 @@ function setMaxSortElements(size){
 
 function runSort(algo){
 
-    curSortAlgo = algo;
+    if(algo == null){
+        alert("NULL!");
+        bucketMaster.remove();
+        return;
+    }
 
-    if(bucketMaster)
-        bucketMaster.removeMasterFromDom();
+    curSortAlgo = algo;
 
     bucketMaster = new BucketMaster(MAX_SORT_ELEMENTS, PERCENT_BUCKMASTER_PAD, algo);
     bucketMaster.createAndAppend();
