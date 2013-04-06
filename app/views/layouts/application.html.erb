@@ -1,14 +1,59 @@
 <!DOCTYPE html>
-<html>
+<html xmlns="http://www.w3.org/1999/html">
 <head>
-  <title>Cbc</title>
-  <%= stylesheet_link_tag    "application", :media => "all" %>
-  <%= javascript_include_tag "application" %>
-  <%= csrf_meta_tags %>
+    <%= stylesheet_link_tag    "application", media: "all" %>
+    <%= javascript_include_tag "application" %>
+    <%= csrf_meta_tags %>
+    <!--[if lt IE 9]>
+    <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <title> Concept Before Code </title>
 </head>
-<body>
 
-<%= yield %>
+<body>
+<!--Number of Sort Elements: <input type="text" id="max_sort_text">-->
+<!--<button type="button" id="maxSortButton">Refresh</button>-->
+<!--<div id="options"><h2 class="optionHeader">Options</h2></div>-->
+<!-- <div class="folddown_instructions">
+    <p>Click on me, I dare you!</p>
+</div> -->
+
+<!--Header-->
+<div class="row-fluid">
+    <div class="navbar navbar-inverse navbar-fixed-top span10">
+        <div class="navbar-inner">
+            <div class="container-fluid">
+
+                <a class="brand" href="#">Concept Before Code</a>
+                <div class="nav-collapse collapse">
+                    <ul class="nav">
+                        <li><%= link_to "Play", root_path %></a></li>
+                        <li><%= link_to "About", about_path %></a></li>
+                        <li><%= link_to "Contact", contact_path%></a></li>
+                    </ul>
+                </div><!--/.nav-collapse -->
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="row-fluid removable" id="playElements">
+    
+
+    <%= yield %>
+</div>
+
+
+
+
+
+
+</div>
+
+
+<script src="http://code.jquery.com/jquery.js"></script>
+<script src="http://code.jquery.com/jquery.js"></script>
+<script src="js/bootstrap.min.js"></script>
 
 </body>
 </html>
