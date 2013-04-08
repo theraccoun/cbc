@@ -1,5 +1,5 @@
 Cbc::Application.routes.draw do
-  root to: 'static_pages#play'
+  root to: 'static_pages#bbs'
   
   match '/about', to: 'static_pages#about'
   match '/contact', to: 'static_pages#contact'

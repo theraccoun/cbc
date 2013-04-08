@@ -3,26 +3,12 @@
         <ul class="well nav nav-list">
             <li class="nav-header">Sorting Algorithms</li>
             <li class="divider"></li>
-            <li><%= link_to "Bubble Sort", bbs_path%></li>
-            <li><%= link_to "Merge Sort", merges_path%></li>
-            <li><%= link_to "Quick Sort", quicks_path%></li>
-            <li><%= link_to "Heap Sort", heaps_path%></li>
-            <li><%= link_to "Radix Sort", radixs_path%></li>
-           <!--  <li class="active" id="liBubbleSort"><a onclick="toggleActiveSideNav('#liBubbleSort'); runSort(bubbleSort)">
-                <i class="icon-chevron-right"></i>Bubble Sort </a>
-            </li>
-            <li id="liMergeSort"><a onclick="toggleActiveSideNav('#liMergeSort'); runSort(MergeSort)">
-                <i class="icon-chevron-right"></i>Merge Sort </a>
-            </li>
-            <li id="liQuickSort"><a onclick="toggleActiveSideNav('#liQuickSort'); runSort(MergeSort)">
-                <i class="icon-chevron-right"></i>Quick Sort </a>
-            </li>
-            <li id="liHeapSort"><a onclick="toggleActiveSideNav('#liHeapSort'); runSort(MergeSort)">
-                <i class="icon-chevron-right"></i>Heap Sort </a>
-            </li>
-            <li id="liRadixSort"><a onclick="toggleActiveSideNav('#liRadixSort'); runSort(MergeSort)">
-                <i class="icon-chevron-right"></i>Radix Sort </a>
-            </li> -->
+            <%= nav_link 'Bubble Sort', root_path %>
+            <%= nav_link 'Merge Sort', merges_path %>
+            <%= nav_link 'Quick Sort', quicks_path %>
+            <%= nav_link 'Heap Sort', heaps_path %>
+            <%= nav_link 'Radix Sort', radixs_path %>
+
 
             <li class="nav-header">Trees and Graphs</li>
             <li class="divider"></li>
