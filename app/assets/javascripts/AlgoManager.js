@@ -7,10 +7,6 @@ var bucketMaster;
 
 var curSortAlgo;
 
-function init(){
-    runSort(bubbleSort);
-}
-
 function toggleActiveSideNav(curButton){
     $('.active').removeClass('active');
     $(curButton).addClass('active');
@@ -38,19 +34,13 @@ function setMaxSortElements(size){
 
 function runSort(algo){
 
-    if(algo == null){
-        alert("NULL!");
-        bucketMaster.remove();
-        return;
+    if($('#bucketMaster').length <= 0){
+        curSortAlgo = algo;
+
+        bucketMaster = new BucketMaster(MAX_SORT_ELEMENTS, PERCENT_BUCKMASTER_PAD, algo);
+        bucketMaster.createAndAppend();
     }
 
-    curSortAlgo = algo;
-
-    bucketMaster = new BucketMaster(MAX_SORT_ELEMENTS, PERCENT_BUCKMASTER_PAD, algo);
-    bucketMaster.createAndAppend();
+    
 
 }
-
-$(document).ready(function(){
-    init();
-});

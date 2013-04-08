@@ -4,6 +4,10 @@
     <%= stylesheet_link_tag    "application", media: "all" %>
     <%= javascript_include_tag "application" %>
     <%= csrf_meta_tags %>
+
+    <meta http-equiv="no-cache">
+    <meta http-equiv="Expires" content="-1">
+    <meta http-equiv="Cache-Control" content="no-cache">
     <!--[if lt IE 9]>
     <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
     <![endif]-->
@@ -18,31 +22,12 @@
     <p>Click on me, I dare you!</p>
 </div> -->
 
-<!--Header-->
-<div class="row-fluid">
-    <div class="navbar navbar-inverse navbar-fixed-top span10">
-        <div class="navbar-inner">
-            <div class="container-fluid">
-
-                <a class="brand" href="#">Concept Before Code</a>
-                <div class="nav-collapse collapse">
-                    <ul class="nav">
-                        <li><%= link_to "Play", root_path %></li>
-                        <li><%= link_to "About", about_path %></li>
-                        <li><%= link_to "Contact", contact_path%></li>
-                        <li id='signup'><%= link_to "Sign Up", signup_path%></li>
-                    </ul>
-                </div><!--/.nav-collapse -->
-            </div>
-        </div>
-    </div>
-</div>
+<%= render 'layouts/header' %>
 
 <div class="row-fluid removable" id="playElements">
     
 
     <%= yield %>
-    <%= javascript_tag "runSort(#{yield(:algo)})" %>
 </div>
 
 

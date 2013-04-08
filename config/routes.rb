@@ -5,6 +5,13 @@ Cbc::Application.routes.draw do
   match '/contact', to: 'static_pages#contact'
   match '/signup', to: 'static_pages#signup'
 
+  match '/bbs', to: 'algo_pages#bbs'
+  match '/merges', to: 'algo_pages#merges'
+  match '/quicks', to: 'algo_pages#quicks'
+  match '/heaps', to: 'algo_pages#heaps'
+  match 'radixs', to: 'algo_pages#radixs'
+
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
