@@ -8,9 +8,7 @@
     <meta http-equiv="no-cache">
     <meta http-equiv="Expires" content="-1">
     <meta http-equiv="Cache-Control" content="no-cache">
-    <!--[if lt IE 9]>
-    <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
-    <![endif]-->
+    <%= render 'layouts/shim' %>
     <title> Concept Before Code </title>
 </head>
 
@@ -25,19 +23,8 @@
 <%= render 'layouts/header' %>
 
 <div class="row-fluid removable" id="playElements">
-    
-
     <%= yield %>
 </div>
-
-
-
-
-
-
-</div>
-
-
 
 </body>
 </html>
